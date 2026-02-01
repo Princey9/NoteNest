@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../" />
+  <title>NoteNest Demo</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="./">
+        <span class="brand-badge">NN</span>
+        NoteNest
+      </a>
+      <nav class="nav-links">
+        <a href="./">Home</a>
+        <a href="pricing/">Pricing</a>
+        <a href="demo/">Demo</a>
+        <a href="https://github.com/Princey9/NoteNest" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main data-demo-root>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">Browser-only demo</span>
+        <h1>Run NoteNest logic entirely in your browser.</h1>
+        <p>Paste a note or upload a file to see deterministic redaction and structured summaries. No backend, no uploads.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="convert-btn">Convert</button>
+          <a class="btn btn-secondary" href="https://github.com/Princey9/NoteNest" target="_blank" rel="noreferrer">CLI Docs</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container demo-grid">
+        <div class="card">
+          <h3>Input note</h3>
+          <p class="muted">Paste a clinical note or upload a file (.txt, .md, .json).</p>
+          <div class="grid" style="gap: 12px;">
+            <input id="note-file" type="file" accept=".txt,.md,.json" />
+            <textarea id="note-text" placeholder="Name: Jane Doe\nChief Complaint: Shortness of breath\nHPI: Patient reports fatigue and cough.\nMedications: Albuterol, Lisinopril\nAllergies: Penicillin\nPlan: Continue inhaler, follow up in 2 weeks."></textarea>
+          </div>
+          <p class="muted" style="margin-top: 12px;">This demo uses deterministic regex rules; CLI output may differ slightly.</p>
+          <p id="status-output" class="muted" style="color: var(--accent-2);"></p>
+        </div>
+
+        <div class="output-panel">
+          <div class="tabs" role="tablist" aria-label="Summary view">
+            <button class="tab-btn" data-tab-button="patient" aria-selected="true" role="tab">Patient view</button>
+            <button class="tab-btn" data-tab-button="clinician" aria-selected="false" role="tab">Clinician view</button>
+          </div>
+
+          <div class="output-block" data-tab-panel="patient" id="patient-output" role="tabpanel"></div>
+          <div class="output-block" data-tab-panel="clinician" id="clinician-output" role="tabpanel" hidden></div>
+
+          <div>
+            <span class="tag">Redacted note</span>
+            <div class="output-block" id="redacted-output">Redacted note will appear here.</div>
+          </div>
+          <div>
+            <span class="tag">Structured summary JSON</span>
+            <div class="output-block" id="json-output">{\n  "chief_complaint": "Not found",\n  "symptoms": ["Not found"],\n  "meds": ["Not found"],\n  "allergies": ["Not found"],\n  "plan": ["Not found"],\n  "follow_up": ["Not found"]\n}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <span>NoteNest v0.1 — GitHub Pages Demo</span>
+      <span>Demo pricing — payments not enabled (exam build).</span>
+    </div>
+  </footer>
+</body>
+</html>

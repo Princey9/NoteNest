@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <base href="../" />
+  <title>NoteNest Pricing</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="./">
+        <span class="brand-badge">NN</span>
+        NoteNest
+      </a>
+      <nav class="nav-links">
+        <a href="./">Home</a>
+        <a href="pricing/">Pricing</a>
+        <a href="demo/">Demo</a>
+        <a href="https://github.com/Princey9/NoteNest" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">Transparent pricing</span>
+        <h1>Choose the plan that fits your workflow.</h1>
+        <p>Start free, or scale up for cohorts and teams. All plans keep notes on-device and never call paid APIs.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" data-modal-open>Checkout (Coming soon)</button>
+          <a class="btn btn-secondary" href="demo/">Try the Demo</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container pricing-grid">
+        <div class="card">
+          <span class="badge">Free</span>
+          <h3>Demo</h3>
+          <div class="price">$0</div>
+          <div class="list">
+            <span>Local demo conversions</span>
+            <span>Sample output exports</span>
+            <span>Offline-first logic</span>
+          </div>
+          <button class="btn btn-primary" data-modal-open>Checkout (Coming soon)</button>
+        </div>
+        <div class="card">
+          <span class="badge">Pro</span>
+          <h3>Student</h3>
+          <div class="price">$9<span>/month</span></div>
+          <div class="list">
+            <span>Full CLI toolkit</span>
+            <span>Batch processing</span>
+            <span>Priority updates</span>
+          </div>
+          <button class="btn btn-primary" data-modal-open>Checkout (Coming soon)</button>
+        </div>
+        <div class="card">
+          <span class="badge">Team</span>
+          <h3>Clinic</h3>
+          <div class="price">$39<span>/seat</span></div>
+          <div class="list">
+            <span>Team-ready outputs</span>
+            <span>Audit logs & templates</span>
+            <span>Shared workflows</span>
+          </div>
+          <button class="btn btn-primary" data-modal-open>Checkout (Coming soon)</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" data-modal>
+    <div class="modal-card">
+      <h3>Checkout (Coming soon)</h3>
+      <p>Payments are disabled for this exam build. Check back after release.</p>
+      <button class="btn btn-primary" data-modal-close>Got it</button>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-grid">
+      <span>NoteNest v0.1 — GitHub Pages Demo</span>
+      <span>Demo pricing — payments not enabled (exam build).</span>
+    </div>
+  </footer>
+</body>
+</html>

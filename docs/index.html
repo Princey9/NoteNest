@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NoteNest — Offline Clinical Note Summaries</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="container navbar">
+      <a class="brand" href="./">
+        <span class="brand-badge">NN</span>
+        NoteNest
+      </a>
+      <nav class="nav-links">
+        <a href="./">Home</a>
+        <a href="pricing/">Pricing</a>
+        <a href="demo/">Demo</a>
+        <a href="https://github.com/Princey9/NoteNest" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="badge">Offline-first clinical intelligence</span>
+        <h1>Turn raw clinical notes into privacy-safe, shareable summaries in seconds.</h1>
+        <p>
+          NoteNest turns messy clinical notes into safe, shareable, and useful summaries—offline by default. It redacts personal identifiers, then produces two outputs: a Patient View (plain-language explanation + next-step questions) and a Clinician View (structured SOAP-style summary with key problems, meds, findings, and plan). Designed for real workflows—referrals, second opinions, handoffs, and study—NoteNest helps patients understand their care and helps clinicians act faster, while keeping sensitive data protected.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="demo/">Try the Demo</a>
+          <a class="btn btn-secondary" href="https://github.com/Princey9/NoteNest" target="_blank" rel="noreferrer">View on GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Why NoteNest</h2>
+          <p>Designed for offline workflows, fast triage, and safe sharing between clinicians, patients, and care teams.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>Privacy-first redaction</h3>
+            <p>Deterministic PII removal removes names, phones, emails, and address cues before summaries are generated.</p>
+          </div>
+          <div class="card">
+            <h3>Patient-friendly language</h3>
+            <p>Generate a clear, gentle explanation plus questions patients can bring to their next visit.</p>
+          </div>
+          <div class="card">
+            <h3>Clinician-ready structure</h3>
+            <p>SOAP-style structured output surfaces problems, meds, findings, and plans in a rapid scan.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>Download the CLI</h2>
+          <p>Grab the latest binaries, or open the Releases page if you are unsure about your platform.</p>
+        </div>
+        <div class="downloads">
+          <a href="https://github.com/Princey9/NoteNest/releases/latest" target="_blank" rel="noreferrer">
+            <span>Latest Release (All platforms)</span>
+            <span>→</span>
+          </a>
+          <a href="https://github.com/Princey9/NoteNest/releases/latest/download/aarch64-unknown-linux-musl.tar.gz" target="_blank" rel="noreferrer">
+            <span>Linux aarch64 (static) — required by exam</span>
+            <span>—</span>
+          </a>
+          <div class="muted">Other platforms (bonus)</div>
+          <a href="https://github.com/Princey9/NoteNest/releases/latest/download/x86_64-unknown-linux-musl.tar.gz" target="_blank" rel="noreferrer">
+            <span>Linux x86_64 (static)</span>
+            <span>—</span>
+          </a>
+        </div>
+        <p class="muted" style="margin-top: 16px;">If you don’t know your platform, open the Releases page.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-title">
+          <h2>How it works</h2>
+          <p>Three quick steps for compliant summaries that stay on your machine.</p>
+        </div>
+        <div class="grid grid-3">
+          <div class="card">
+            <h3>1. Import a note</h3>
+            <p>Paste a note, upload a file, or stream from stdin in the CLI.</p>
+          </div>
+          <div class="card">
+            <h3>2. Redact + structure</h3>
+            <p>PII patterns are removed before deterministic heuristics organize the note.</p>
+          </div>
+          <div class="card">
+            <h3>3. Share outputs</h3>
+            <p>Deliver patient-friendly summaries and clinician views as txt, md, or json.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <span>NoteNest v0.1 — GitHub Pages Demo</span>
+      <span>Demo pricing — payments not enabled (exam build).</span>
+    </div>
+  </footer>
+</body>
+</html>
